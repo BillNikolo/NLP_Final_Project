@@ -14,6 +14,8 @@ from nltk.tokenize import TweetTokenizer
 nltk.download('stopwords')
 stopwords_english = stopwords.words('english')
 
+# Question A. Text Preprocessing
+# Removing unnecessary things, tokenization and stemming(faster way)
 data = pd.read_csv(r'news.csv')
 text_column = pd.DataFrame(data, columns=['text']).values.tolist()
 labels = pd.DataFrame(data, columns=['label']).values.tolist()
